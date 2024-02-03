@@ -4,7 +4,7 @@ namespace KaioGerhardt\_4devs;
 
 use KaioGerhardt\_4devs\Modules\CPF;
 use KaioGerhardt\_4devs\Modules\CEP;
-
+use KaioGerhardt\_4devs\Modules\Email;
 
 class Validate {
 
@@ -16,5 +16,10 @@ class Validate {
     public static function cep(string $cep) :bool {
         $cep = new CEP($cep);
         return $cep->validate();
+    }
+
+    public static function email(string $email) :bool {
+        $email = new Email($email);
+        return $email->validate();
     }
 }

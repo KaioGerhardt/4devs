@@ -21,4 +21,9 @@ class ValidateTest extends TestCase {
         $cep = "93.420-150";
         $this->assertTrue(Validate::cep($cep)); 
     }
+
+    public function testValidateEmailValid() {
+        $email = "gerhardt.kaio@gmail.com";
+        $this->assertTrue(Validate::email($email)); 
+    }
 }
